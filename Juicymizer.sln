@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Juicymizer", "Juicymizer\Juicymizer.csproj", "{700237A4-8CE6-4647-A656-DD69C535DEDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{700237A4-8CE6-4647-A656-DD69C535DEDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700237A4-8CE6-4647-A656-DD69C535DEDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700237A4-8CE6-4647-A656-DD69C535DEDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700237A4-8CE6-4647-A656-DD69C535DEDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {780FC8DB-5D04-4386-B605-4DC549BA7F55}
+	EndGlobalSection
+EndGlobal
