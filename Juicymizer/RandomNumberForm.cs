@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Juicymizer
 {
-    public partial class RandomNumberForm : UBTStandardLibrary.Forms.N1Form
+    public partial class RandomNumberForm : Form
     {
         public RandomNumberForm()
         {

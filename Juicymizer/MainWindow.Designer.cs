@@ -53,7 +53,8 @@
             this.chkEnableRightClick = new System.Windows.Forms.CheckBox();
             this.chkEnableLeftClick = new System.Windows.Forms.CheckBox();
             this.chkEnableHotKey = new System.Windows.Forms.CheckBox();
-            this.pnlWindow.SuspendLayout();
+            this.chkXB1 = new System.Windows.Forms.CheckBox();
+            this.chkXB2 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -68,19 +69,13 @@
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlWindow
-            // 
-            this.pnlWindow.Controls.Add(this.panel1);
-            this.pnlWindow.Size = new System.Drawing.Size(654, 394);
-            this.pnlWindow.Controls.SetChildIndex(this.panel1, 0);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(651, 394);
+            this.panel1.Size = new System.Drawing.Size(657, 434);
             this.panel1.TabIndex = 5;
             // 
             // tabControl1
@@ -91,7 +86,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(651, 394);
+            this.tabControl1.Size = new System.Drawing.Size(657, 434);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -100,7 +95,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(643, 368);
+            this.tabPage1.Size = new System.Drawing.Size(649, 408);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Service";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -111,7 +106,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(637, 362);
+            this.panel2.Size = new System.Drawing.Size(643, 402);
             this.panel2.TabIndex = 6;
             // 
             // tableLayoutPanel1
@@ -127,7 +122,7 @@
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(637, 362);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(643, 402);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // btnStart
@@ -159,7 +154,7 @@
             this.btnStart.OnHovercolor = System.Drawing.Color.Green;
             this.btnStart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStart.selected = false;
-            this.btnStart.Size = new System.Drawing.Size(302, 336);
+            this.btnStart.Size = new System.Drawing.Size(305, 376);
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Start";
             this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,13 +186,13 @@
             this.btnStop.IconVisible = false;
             this.btnStop.IconZoom = 90D;
             this.btnStop.IsTab = false;
-            this.btnStop.Location = new System.Drawing.Point(321, 13);
+            this.btnStop.Location = new System.Drawing.Point(324, 13);
             this.btnStop.Name = "btnStop";
             this.btnStop.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnStop.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnStop.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStop.selected = false;
-            this.btnStop.Size = new System.Drawing.Size(303, 336);
+            this.btnStop.Size = new System.Drawing.Size(306, 376);
             this.btnStop.TabIndex = 0;
             this.btnStop.Text = "Stop";
             this.btnStop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,10 +204,11 @@
             // 
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.tableLayoutPanel2);
+            this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(805, 437);
+            this.tabPage2.Size = new System.Drawing.Size(649, 408);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Settings";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -221,9 +217,9 @@
             // 
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(3, 391);
+            this.panel3.Location = new System.Drawing.Point(3, 362);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(799, 43);
+            this.panel3.Size = new System.Drawing.Size(643, 43);
             this.panel3.TabIndex = 1;
             // 
             // btnSave
@@ -255,7 +251,7 @@
             this.btnSave.OnHovercolor = System.Drawing.Color.Green;
             this.btnSave.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSave.selected = false;
-            this.btnSave.Size = new System.Drawing.Size(799, 43);
+            this.btnSave.Size = new System.Drawing.Size(643, 43);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -291,40 +287,42 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(799, 197);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(643, 197);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // nudSize
             // 
             this.nudSize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSize.Location = new System.Drawing.Point(159, 159);
+            this.nudSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.nudSize.Location = new System.Drawing.Point(129, 159);
             this.nudSize.Name = "nudSize";
-            this.nudSize.Size = new System.Drawing.Size(633, 31);
+            this.nudSize.Size = new System.Drawing.Size(507, 31);
             this.nudSize.TabIndex = 4;
             // 
             // nudMiximum
             // 
             this.nudMiximum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudMiximum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudMiximum.Location = new System.Drawing.Point(159, 121);
+            this.nudMiximum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.nudMiximum.Location = new System.Drawing.Point(129, 121);
             this.nudMiximum.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.nudMiximum.Name = "nudMiximum";
-            this.nudMiximum.Size = new System.Drawing.Size(633, 31);
+            this.nudMiximum.Size = new System.Drawing.Size(507, 31);
             this.nudMiximum.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
             this.label1.Location = new System.Drawing.Point(7, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 37);
+            this.label1.Size = new System.Drawing.Size(115, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Key";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,32 +331,33 @@
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
             this.label2.Location = new System.Drawing.Point(7, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 37);
+            this.label2.Size = new System.Drawing.Size(115, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Minimum";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtKey
             // 
-            this.txtKey.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
-            this.txtKey.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
-            this.txtKey.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
+            this.txtKey.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.txtKey.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.txtKey.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
             this.txtKey.BorderThickness = 2;
             this.txtKey.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtKey.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKey.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtKey.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtKey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
+            this.txtKey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
             this.txtKey.Hint = "Hot Key";
+            this.txtKey.Index = -1;
             this.txtKey.isPassword = false;
-            this.txtKey.Location = new System.Drawing.Point(160, 46);
+            this.txtKey.Location = new System.Drawing.Point(130, 46);
             this.txtKey.Margin = new System.Windows.Forms.Padding(4);
             this.txtKey.MaxLength = 32767;
             this.txtKey.Name = "txtKey";
-            this.txtKey.Size = new System.Drawing.Size(631, 29);
+            this.txtKey.Size = new System.Drawing.Size(505, 29);
             this.txtKey.TabIndex = 1;
             this.txtKey.Text = "Hot Key";
             this.txtKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -369,10 +368,10 @@
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
             this.label3.Location = new System.Drawing.Point(7, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 37);
+            this.label3.Size = new System.Drawing.Size(115, 37);
             this.label3.TabIndex = 0;
             this.label3.Text = "Maximum";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -381,10 +380,10 @@
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
             this.label4.Location = new System.Drawing.Point(7, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 37);
+            this.label4.Size = new System.Drawing.Size(115, 37);
             this.label4.TabIndex = 0;
             this.label4.Text = "Font Size";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -393,37 +392,40 @@
             // 
             this.nudMinimum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudMinimum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudMinimum.Location = new System.Drawing.Point(159, 83);
+            this.nudMinimum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.nudMinimum.Location = new System.Drawing.Point(129, 83);
             this.nudMinimum.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.nudMinimum.Name = "nudMinimum";
-            this.nudMinimum.Size = new System.Drawing.Size(633, 31);
+            this.nudMinimum.Size = new System.Drawing.Size(507, 31);
             this.nudMinimum.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
             this.label5.Location = new System.Drawing.Point(7, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 37);
+            this.label5.Size = new System.Drawing.Size(115, 37);
             this.label5.TabIndex = 0;
             this.label5.Text = "Enable";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.chkXB2);
+            this.panel4.Controls.Add(this.chkXB1);
             this.panel4.Controls.Add(this.chkEnableRightClick);
             this.panel4.Controls.Add(this.chkEnableLeftClick);
             this.panel4.Controls.Add(this.chkEnableHotKey);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(159, 7);
+            this.panel4.Location = new System.Drawing.Point(129, 7);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(633, 31);
+            this.panel4.Size = new System.Drawing.Size(507, 31);
             this.panel4.TabIndex = 5;
             // 
             // chkEnableRightClick
@@ -459,18 +461,37 @@
             this.chkEnableHotKey.Text = "Hot Key";
             this.chkEnableHotKey.UseVisualStyleBackColor = true;
             // 
+            // chkXB1
+            // 
+            this.chkXB1.AutoSize = true;
+            this.chkXB1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chkXB1.Location = new System.Drawing.Point(281, 0);
+            this.chkXB1.Name = "chkXB1";
+            this.chkXB1.Size = new System.Drawing.Size(70, 31);
+            this.chkXB1.TabIndex = 1;
+            this.chkXB1.Text = "XButton1";
+            this.chkXB1.UseVisualStyleBackColor = true;
+            // 
+            // chkXB2
+            // 
+            this.chkXB2.AutoSize = true;
+            this.chkXB2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chkXB2.Location = new System.Drawing.Point(351, 0);
+            this.chkXB2.Name = "chkXB2";
+            this.chkXB2.Size = new System.Drawing.Size(70, 31);
+            this.chkXB2.TabIndex = 2;
+            this.chkXB2.Text = "XButton2";
+            this.chkXB2.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 434);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(0, 0);
-            this.LogoImage = ((System.Drawing.Image)(resources.GetObject("$this.LogoImage")));
             this.Name = "MainWindow";
             this.Text = "Juicymizer";
-            this.TitleText = "Juicymizer";
-            this.pnlWindow.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -514,6 +535,8 @@
         private System.Windows.Forms.CheckBox chkEnableHotKey;
         private System.Windows.Forms.CheckBox chkEnableRightClick;
         private System.Windows.Forms.CheckBox chkEnableLeftClick;
+        private System.Windows.Forms.CheckBox chkXB2;
+        private System.Windows.Forms.CheckBox chkXB1;
     }
 }
 

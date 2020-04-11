@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.4">
-      <HintPath>X:\All Softwares\Desktop Application\UBTStandardLibrary\UBTStandardLibrary\bin\Debug\Bunifu_UI_v1.5.4.dll</HintPath>
+      <HintPath>..\..\ubtlib\UBTStandardLibrary\bin\Debug\Bunifu_UI_v1.5.4.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -59,7 +59,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="UBTStandardLibrary">
-      <HintPath>X:\All Softwares\Desktop Application\UBTStandardLibrary\UBTStandardLibrary\bin\Debug\UBTStandardLibrary.dll</HintPath>
+      <HintPath>..\..\ubtlib\UBTStandardLibrary\bin\Debug\UBTStandardLibrary.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -88,9 +88,6 @@
     </Compile>
     <Compile Include="TrayService.cs" />
     <Compile Include="UserActivityHook.cs" />
-    <Compile Include="UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,12 +120,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="UserControl1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Content Include="LOGO.ico" />

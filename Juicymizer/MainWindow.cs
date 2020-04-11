@@ -18,7 +18,7 @@ using MouseEventArgs = System.Windows.Forms.MouseEventArgs;
 
 namespace Juicymizer
 {
-    public partial class MainWindow : UBTStandardLibrary.Forms.N1Form
+    public partial class MainWindow : Form
     {
         private Setting CurrentSetting;
         private TrayService service;
@@ -40,6 +40,8 @@ namespace Juicymizer
                 chkEnableLeftClick.Checked = CurrentSetting.LeftClick;
                 chkEnableRightClick.Checked = CurrentSetting.RightClick;
                 chkEnableHotKey.Checked = CurrentSetting.HotKey;
+                chkXB1.Checked = CurrentSetting.XButton1;
+                chkXB2.Checked = CurrentSetting.XButton2;
             }
             else
             {
@@ -93,6 +95,8 @@ namespace Juicymizer
                 HotKey = chkEnableHotKey.Checked,
                 LeftClick = chkEnableLeftClick.Checked,
                 RightClick = chkEnableRightClick.Checked,
+                XButton1 = chkXB1.Checked,
+                XButton2 = chkXB2.Checked,
             };
             CurrentSetting = s;
             Settings.Default.JsonSetting = JsonConvert.SerializeObject(s);
@@ -147,7 +151,7 @@ namespace Juicymizer
         private void UAHOnOnMouseActivity(object sender, MouseEventArgs e)
         {
             if ((e.Button == MouseButtons.Right && CurrentSetting.RightClick) ||
-                (e.Button == MouseButtons.Left && CurrentSetting.LeftClick))
+                (e.Button == MouseButtons.Left && CurrentSetting.LeftClick)||(e.Button == MouseButtons.XButton1 && CurrentSetting.XButton1) || (e.Button == MouseButtons.XButton2 && CurrentSetting.XButton2))
             {
                 GenerateNew();
             }
@@ -183,10 +187,25 @@ namespace Juicymizer
 
         private void GenerateNew()
         {
-            f?.Dispose();
-            f = new RandomNumberForm {StartPosition = FormStartPosition.Manual};
-            f.Show(CurrentSetting.FontSize, CurrentSetting.Minimum, CurrentSetting.Maximum);
-            f.Location = GetCursorPosition();
+            if (f == null)
+            {
+                f = new RandomNumberForm { StartPosition = FormStartPosition.Manual };
+                f.Closed += FOnClosed;
+                f.Show(CurrentSetting.FontSize, CurrentSetting.Minimum, CurrentSetting.Maximum);
+                f.Location = GetCursorPosition();
+            }
+            else
+            {
+                f.Closed -= FOnClosed;
+                f.Dispose();
+                f = null;
+            }
+            
+        }
+
+        private void FOnClosed(object sender, EventArgs e)
+        {
+            f = null;
         }
 
         private RandomNumberForm f;
@@ -229,6 +248,8 @@ namespace Juicymizer
         public bool LeftClick { get; set; }
         public bool RightClick { get; set; }
         public bool HotKey { get; set; }
+        public bool XButton1 { get; set; }
+        public bool XButton2 { get; set; }
 
     }
 
