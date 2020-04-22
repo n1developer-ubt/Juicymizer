@@ -35,7 +35,7 @@
             // lblNumber
             // 
             this.lblNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(96)))), ((int)(((byte)(162)))));
+            this.lblNumber.ForeColor = System.Drawing.Color.Black;
             this.lblNumber.Location = new System.Drawing.Point(0, 0);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(130, 109);

@@ -50,11 +50,11 @@
             this.nudMinimum = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.chkXB2 = new System.Windows.Forms.CheckBox();
+            this.chkXB1 = new System.Windows.Forms.CheckBox();
             this.chkEnableRightClick = new System.Windows.Forms.CheckBox();
             this.chkEnableLeftClick = new System.Windows.Forms.CheckBox();
             this.chkEnableHotKey = new System.Windows.Forms.CheckBox();
-            this.chkXB1 = new System.Windows.Forms.CheckBox();
-            this.chkXB2 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -204,7 +204,7 @@
             // 
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.tabPage2.ForeColor = System.Drawing.Color.Black;
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -294,7 +294,7 @@
             // 
             this.nudSize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.nudSize.ForeColor = System.Drawing.Color.Black;
             this.nudSize.Location = new System.Drawing.Point(129, 159);
             this.nudSize.Name = "nudSize";
             this.nudSize.Size = new System.Drawing.Size(507, 31);
@@ -304,7 +304,7 @@
             // 
             this.nudMiximum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudMiximum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudMiximum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.nudMiximum.ForeColor = System.Drawing.Color.Black;
             this.nudMiximum.Location = new System.Drawing.Point(129, 121);
             this.nudMiximum.Maximum = new decimal(new int[] {
             10000000,
@@ -319,7 +319,7 @@
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(7, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 37);
@@ -331,7 +331,7 @@
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(7, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 37);
@@ -341,15 +341,15 @@
             // 
             // txtKey
             // 
-            this.txtKey.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
-            this.txtKey.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
-            this.txtKey.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.txtKey.BorderColorFocused = System.Drawing.Color.Black;
+            this.txtKey.BorderColorIdle = System.Drawing.Color.Black;
+            this.txtKey.BorderColorMouseHover = System.Drawing.Color.Black;
             this.txtKey.BorderThickness = 2;
             this.txtKey.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtKey.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKey.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtKey.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtKey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.txtKey.ForeColor = System.Drawing.Color.Black;
             this.txtKey.Hint = "Hot Key";
             this.txtKey.Index = -1;
             this.txtKey.isPassword = false;
@@ -368,7 +368,7 @@
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(7, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 37);
@@ -380,7 +380,7 @@
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(7, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 37);
@@ -392,7 +392,7 @@
             // 
             this.nudMinimum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudMinimum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudMinimum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.nudMinimum.ForeColor = System.Drawing.Color.Black;
             this.nudMinimum.Location = new System.Drawing.Point(129, 83);
             this.nudMinimum.Maximum = new decimal(new int[] {
             10000000,
@@ -407,7 +407,7 @@
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(124)))));
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(7, 4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 37);
@@ -427,6 +427,28 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(507, 31);
             this.panel4.TabIndex = 5;
+            // 
+            // chkXB2
+            // 
+            this.chkXB2.AutoSize = true;
+            this.chkXB2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chkXB2.Location = new System.Drawing.Point(351, 0);
+            this.chkXB2.Name = "chkXB2";
+            this.chkXB2.Size = new System.Drawing.Size(70, 31);
+            this.chkXB2.TabIndex = 2;
+            this.chkXB2.Text = "XButton2";
+            this.chkXB2.UseVisualStyleBackColor = true;
+            // 
+            // chkXB1
+            // 
+            this.chkXB1.AutoSize = true;
+            this.chkXB1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.chkXB1.Location = new System.Drawing.Point(281, 0);
+            this.chkXB1.Name = "chkXB1";
+            this.chkXB1.Size = new System.Drawing.Size(70, 31);
+            this.chkXB1.TabIndex = 1;
+            this.chkXB1.Text = "XButton1";
+            this.chkXB1.UseVisualStyleBackColor = true;
             // 
             // chkEnableRightClick
             // 
@@ -461,28 +483,6 @@
             this.chkEnableHotKey.Text = "Hot Key";
             this.chkEnableHotKey.UseVisualStyleBackColor = true;
             // 
-            // chkXB1
-            // 
-            this.chkXB1.AutoSize = true;
-            this.chkXB1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chkXB1.Location = new System.Drawing.Point(281, 0);
-            this.chkXB1.Name = "chkXB1";
-            this.chkXB1.Size = new System.Drawing.Size(70, 31);
-            this.chkXB1.TabIndex = 1;
-            this.chkXB1.Text = "XButton1";
-            this.chkXB1.UseVisualStyleBackColor = true;
-            // 
-            // chkXB2
-            // 
-            this.chkXB2.AutoSize = true;
-            this.chkXB2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.chkXB2.Location = new System.Drawing.Point(351, 0);
-            this.chkXB2.Name = "chkXB2";
-            this.chkXB2.Size = new System.Drawing.Size(70, 31);
-            this.chkXB2.TabIndex = 2;
-            this.chkXB2.Text = "XButton2";
-            this.chkXB2.UseVisualStyleBackColor = true;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,6 +491,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Juicymizer";
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);

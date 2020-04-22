@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
 using GlobalLowLevelHooks;
+using Gma.System.MouseKeyHook;
 using gma.System.Windows;
 using Juicymizer.Properties;
 using Newtonsoft.Json;
@@ -125,7 +126,7 @@ namespace Juicymizer
         {
             _uAH.KeyDown -= UAHOnKeyDown;
             _uAH.KeyUp-= UAHOnKeyUp;
-            _uAH.OnMouseActivity -= UAHOnOnMouseActivity;
+            _mouseHook.MouseDownExt -= M_GlobalHookOnMouseDownExt;
             AlterEnable(true);
         }
         private readonly UserActivityHook _uAH = new UserActivityHook(true, true);
@@ -133,8 +134,23 @@ namespace Juicymizer
         {
             _uAH.KeyDown +=  UAHOnKeyDown;
             _uAH.KeyUp += UAHOnKeyUp;
-            _uAH.OnMouseActivity += UAHOnOnMouseActivity;
+            _mouseHook = Hook.GlobalEvents();
+
+            _mouseHook.MouseDownExt += M_GlobalHookOnMouseDownExt;
         }
+
+        private void M_GlobalHookOnMouseDownExt(object sender, MouseEventExtArgs e)
+        {
+            if (e.Button == MouseButtons.None)
+                return; 
+            
+            if ((e.Button == MouseButtons.Right && CurrentSetting.RightClick) ||
+                            (e.Button == MouseButtons.Left && CurrentSetting.LeftClick) || (e.Button == MouseButtons.XButton1 && CurrentSetting.XButton1) || (e.Button == MouseButtons.XButton2 && CurrentSetting.XButton2))
+            {
+                GenerateNew();
+            }
+        }
+        private IKeyboardMouseEvents _mouseHook;
 
         private void UAHOnKeyUp(object sender, KeyEventArgs e)
         {
@@ -145,17 +161,10 @@ namespace Juicymizer
             if (_shiftKeys.Contains(e.KeyCode))
                 _isShift = false;
 
-            System.Diagnostics.Debug.Write($"Control: {_isControl}\nShift: {_isShift}\nAlt: {_isAlt}\n\n");
+            //System.Diagnostics.Debug.Write($"Control: {_isControl}\nShift: {_isShift}\nAlt: {_isAlt}\n\n");
         }
 
-        private void UAHOnOnMouseActivity(object sender, MouseEventArgs e)
-        {
-            if ((e.Button == MouseButtons.Right && CurrentSetting.RightClick) ||
-                (e.Button == MouseButtons.Left && CurrentSetting.LeftClick)||(e.Button == MouseButtons.XButton1 && CurrentSetting.XButton1) || (e.Button == MouseButtons.XButton2 && CurrentSetting.XButton2))
-            {
-                GenerateNew();
-            }
-        }
+        
 
         private void UAHOnKeyDown(object sender, KeyEventArgs e)
         {
@@ -167,8 +176,8 @@ namespace Juicymizer
                 _isShift = true;
             else
             {
-                if ((CurrentSetting.KeyData.Shift = _isShift) && (CurrentSetting.KeyData.Alt = _isAlt) &&
-                    (CurrentSetting.KeyData.Control = _isControl) && (e.KeyValue == (int) CurrentSetting.KeyData.Key))
+                if (CurrentSetting.KeyData.Shift == _isShift && CurrentSetting.KeyData.Alt == _isAlt &&
+                    CurrentSetting.KeyData.Control == _isControl && e.KeyValue == (int)CurrentSetting.KeyData.Key)
                 {
                     //MessageBox.Show("");
                     //System.Diagnostics.Debug.Write($"Control: {CurrentSetting.KeyData.Shift}--{_isControl}\nShift: {CurrentSetting.KeyData.Shift}---{_isShift}\nAlt: {CurrentSetting.KeyData.Shift}--{_isAlt}\n\n");
@@ -191,6 +200,8 @@ namespace Juicymizer
             {
                 f = new RandomNumberForm { StartPosition = FormStartPosition.Manual };
                 f.Closed += FOnClosed;
+                f.TopLevel = true;
+                f.TopMost = true;
                 f.Show(CurrentSetting.FontSize, CurrentSetting.Minimum, CurrentSetting.Maximum);
                 f.Location = GetCursorPosition();
             }
@@ -238,6 +249,7 @@ namespace Juicymizer
             return lpPoint;
         }
     }
+
 
     class Setting
     {
